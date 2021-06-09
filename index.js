@@ -45,9 +45,17 @@ Use the copy function below to do the following:
     2. Return a copy of the received array  
 */
 
-function copy(/*your code here*/){
-    /*your code here*/
-}    
+function copy(array){
+
+    const flavors = []
+    for (let i = 0; i < array.length; i++){
+
+        flavors.push(array[i]);
+
+    }
+    return flavors
+}   
+ copy(originalFlavors)
 
 
 
@@ -64,8 +72,11 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 
-function is31Flavors(/*your code here*/){
-   /*your code here*/
+function is31Flavors(array){
+   if (originalFlavors.length !== 31){
+       return false
+   }
+   return true;
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -81,10 +92,14 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(/*your code here*/){
-   /*your code here*/
-}
+function addFlavor(array){
+    let newFlavor = ''
 
+    for (let i = 0; i < array.length; i++){
+        array.unshift(newFlavor);
+    }
+}
+console.log(addFlavor('Rainbow Sherbert'));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Houston, we have a problem! There are now 32 flavors in the originalFlavors array! Your task is to remove an item from the end of the array. 
@@ -114,8 +129,8 @@ Use the getFlavorByIndex function below to do the following:
     For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(/*your code here*/){
-    /*your code here*/
+function getFlavorByIndex(array){
+    let desiredIndex = 
 }
 
 
@@ -135,7 +150,7 @@ Use the removeFlavorByName function below to do the following:
 */
 
 function removeFlavorByName(/*your code here*/){
-    /*your code here*/...
+    /*your code here*/
 }
 
 
@@ -160,9 +175,16 @@ Use the filterByWord function below to do the following:
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/){
-    /*your code here*/
+function filterByWord(array, string){
+    const filteredFlavors = [];
+    for(let i = 0; i < array.length; i++) {
+        if(array[i].includes(string)){
+            filteredFlavors.push(array[i]);
+        }
+    }
+    return filteredFlavors;
 }
+console.log('task7', filterByWord(originalFlavors,'Chocolate'));
 
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
@@ -196,7 +218,7 @@ Use the getRandomFlavors function and new arrays below to do the following:
 
 
 function getRandomFlavors(/*code here*/){
-    /*code here*../
+    /*code here*/
 }
 
 // NEW DATA ARRAYS FOR STRETCH 2 ⬇️
@@ -299,4 +321,3 @@ export default{
     getAverageWordLength,
     getRandomFlavors
 }
-
