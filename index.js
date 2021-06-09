@@ -135,7 +135,7 @@ Use the removeFlavorByName function below to do the following:
 */
 
 function removeFlavorByName(/*your code here*/){
-    /*your code here*/
+    /*your code here*/...
 }
 
 
@@ -196,7 +196,7 @@ Use the getRandomFlavors function and new arrays below to do the following:
 
 
 function getRandomFlavors(/*code here*/){
-    /*code here*/
+    /*code here*../
 }
 
 // NEW DATA ARRAYS FOR STRETCH 2 ⬇️
